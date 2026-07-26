@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Lovelove ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    background:linear-gradient(180deg,#ff9a9e,#fad0c4,#ffe4e1,#fff5f7);
+}
+
+/* Intro Section */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    text-shadow:2px 2px 10px rgba(0,0,0,.3);
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:22px;
+}
+
+.arrow{
+    margin-top:40px;
+    font-size:55px;
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(15px);}
+}
+
+/* Letter */
+.container{
+    display:flex;
+    justify-content:center;
+    padding:80px 20px;
+}
+
+.letter{
+    width:90%;
+    max-width:750px;
+    background:rgb(219, 189, 212);
+    border-radius:20px;
+    padding:45px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+    animation:fadeIn 2s ease;
+}
+
+.letter h2{
+    color:#ff4d6d;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.letter p{
+    font-size:19px;
+    line-height:2;
+    color:#444;
+    text-align:justify;
+    margin-bottom:20px;
+}
+
+.signature{
+    margin-top:40px;
+    text-align:right;
+    color:#ff4d6d;
+    font-size:24px;
+    font-weight:bold;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Floating Hearts */
+.heart{
+    position:fixed;
+    bottom:-30px;
+    color:#ff4d6d;
+    animation:float linear infinite;
+    pointer-events:none;
+    opacity:.8;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<!-- Intro -->
+<section class="hero">
+    <h1>❤️ For My Lovelove ❤️</h1>
+    <p>Scroll down to read my letter...</p>
+    <div class="arrow">⬇️</div>
+</section>
+
+<!-- Letter -->
+<div class="container">
+    <div class="letter">
+
+        <h2>💌 Dear Lovelove nako,</h2>
+
+        <p><strong>Sorry kaayo palangga nako.</strong></p>
+
+        <p>
+            Kabalo ko naka himo kug sala and I only hope you'll take a
+            moment to read this and understand how truly sorry I am.
+        </p>
+
+        <p>
+            You mean so much to me, and it hurts knowing that my actions
+            caused you pain. I never wanted to be the reason behind your
+            tears or sadness. If I could take back the mistakes I made.
+        </p>
+
+        <p>
+            I promise to learn from my mistakes and become a better person,
+            not just for us, but because you inspire me to be better every
+            day. I know trust and forgiveness take time, and I won't force
+            you to forgive me. I'll do my best to prove through my actions
+            that my apology is sincere.
+        </p>
+
+        <p>
+            No matter what happens, I want you to know that I truly love
+            you. You are one of the greatest blessings in my life, and I
+            hope we can heal together and create happier memories in the
+            future.
+        </p>
+
+        <p>
+            I love you so much, Lovelove. I'm sorry, and I hope you can
+            find it in your heart to forgive me.
+        </p>
+
+        <div class="signature">
+            Forever yours,<br>
+            Adrian ❤️
+        </div>
+
+    </div>
+</div>
+
+<script>
+// Floating Hearts
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(18+Math.random()*20)+"px";
+    heart.style.animationDuration=(6+Math.random()*5)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },11000);
+}
+
+setInterval(createHeart,500);
+</script>
+
+</body>
+</html>
